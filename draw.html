@@ -24,13 +24,11 @@
     <script src="convexhull.js"></script>
     <script>
      var map = new maptalks.Map("map", {
-       baseLayer: new maptalks.TileLayer("base", {
-         urlTemplate: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
-         subdomains: ["a", "b", "c", "d"],
-         attribution: '&copy; <a href="http://osm.org">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>'
-       }),
        center: [114.267352, 30.600001],
        zoom: 19,
+       spatialReference: {
+         projection: "EPSG:4326",
+       },
      });
      var vectorLayer = new maptalks.VectorLayer("vector");
      vectorLayer.addTo(map);
