@@ -8,7 +8,7 @@ var ALMOST_ZERO = 0.00001;
 function GetSideOfLine(lineStart, lineEnd, point)
 {
     var d = (lineEnd.x-lineStart.x)*(point.y-lineStart.y)-(lineEnd.y-lineStart.y)*(point.x-lineStart.x);
-    return (d > ALMOST_ZERO ? LEFT : (d < -ALMOST_ZERO ? RIGHT : ON));
+    return (d > 0.0 ? LEFT : (d < 0.0 ? RIGHT : ON));
 }
 
 // returns convex hull in CW order
@@ -28,7 +28,7 @@ function CalcConvexHull(points)
         // perform lexicographical compare
         if (points[i].x < hullPt.x)
             hullPt = points[i];
-        else if (Math.abs(points[i].x-hullPt.x) < ALMOST_ZERO) // equal
+        else if (points[i].x === hullPt.x) // equal
             if (points[i].y < hullPt.y)
                 hullPt = points[i];
     }

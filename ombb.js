@@ -29,10 +29,10 @@ function CalcOmbb(convexHull)
         }
         
         // draw rectangle candidates
-        DrawLine(obbUpperLeft.x, obbUpperLeft.y, obbBottomLeft.x, obbBottomLeft.y, "#336699");
-        DrawLine(obbBottomRight.x, obbBottomRight.y, obbUpperRight.x, obbUpperRight.y, "#336699");
-        DrawLine(obbUpperRight.x, obbUpperRight.y, obbUpperLeft.x, obbUpperLeft.y, "#336699");
-        DrawLine(obbBottomLeft.x, obbBottomLeft.y, obbBottomRight.x, obbBottomRight.y, "#336699");
+        // DrawLine(obbUpperLeft.x, obbUpperLeft.y, obbBottomLeft.x, obbBottomLeft.y, "#336699");
+        // DrawLine(obbBottomRight.x, obbBottomRight.y, obbUpperRight.x, obbUpperRight.y, "#336699");
+        // DrawLine(obbUpperRight.x, obbUpperRight.y, obbUpperLeft.x, obbUpperLeft.y, "#336699");
+        // DrawLine(obbBottomLeft.x, obbBottomLeft.y, obbBottomRight.x, obbBottomRight.y, "#336699");
     }
     
     // initialize attributes
